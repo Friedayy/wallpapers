@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mohammad Amaan — 4K Wallpaper Studio</title>
+  <meta name="description" content="Ultra-HD 4K (3840×2160) Dark Aesthetic Wallpapers for Mohammad Amaan: Anime, Futuristic Sci-Fi, Nature Aurora, Minimalist Zen, and Dark Coding IDE Studio.">
+  <meta name="keywords" content="Mohammad Amaan, 4K Wallpapers, Anime Wallpaper 4K, Futuristic Sci-Fi Wallpaper, Nature Aurora 4K, Minimalist Desktop Wallpaper, Developer Coding Wallpaper">
+  <meta name="author" content="Mohammad Amaan">
+  <meta name="theme-color" content="#05070d">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amaandev.me/">
+  <meta property="og:title" content="Mohammad Amaan — 4K Wallpaper Studio">
+  <meta property="og:description" content="Ultra-HD 4K Wallpapers: Anime aesthetic, Futuristic sci-fi, Nature landscapes, Minimalist zen, and Dark coding studio with instant 3840×2160 export.">
+  <meta property="og:image" content="images/mohammad_amaan_anime_cyber_city.png">
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohammad Amaan — 4K Wallpaper Studio">
+  <meta name="twitter:description" content="10+ Ultra-HD 4K Wallpapers across Anime, Futuristic, Nature, Minimalist, and Coding categories.">
+  <meta name="twitter:image" content="images/mohammad_amaan_anime_cyber_city.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300f5ff'/%3E%3Cstop offset='100%25' stop-color='%23bc13fe'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2305070d' stroke='url(%23g)' stroke-width='3'/%3E%3Cpath d='M20 22 L10 32 L20 42 M44 22 L54 32 L44 42 M35 18 L29 46' stroke='url(%23g)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-cyber">
+  <!-- Interactive Ambient Canvas & Background Image Stage Layer -->
+  <div class="wallpaper-art-bg" id="wallpaper-art-bg" aria-hidden="true"></div>
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header" id="site-header" aria-label="Site Navigation">
+    <div class="header-inner">
+      <!-- Left: Identity & Category Indicator -->
+      <div class="brand-group">
+        <a href="https://amaandev.me" target="_blank" rel="noopener noreferrer" class="brand-link" title="Visit Mohammad Amaan's Portfolio (amaandev.me)">
+          <div class="brand-avatar" aria-hidden="true">MA</div>
+          <div class="brand-meta">
+            <span class="brand-title">Mohammad Amaan</span>
+            <span class="brand-subtitle">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              <span id="active-wallpaper-title">Cyber Circuit Neon</span>
+            </span>
+          </div>
+        </a>
+        <a href="https://amaandev.me" target="_blank" rel="noopener noreferrer" class="portfolio-chip" title="amaandev.me">
+          <span>amaandev.me</span>
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Center: Quick Category Filter Pills -->
+      <nav class="header-nav-tabs" aria-label="Wallpaper categories">
+        <button type="button" class="category-pill active" data-category="all">All</button>
+        <button type="button" class="category-pill" data-category="anime">🌸 Anime</button>
+        <button type="button" class="category-pill" data-category="futuristic">🚀 Futuristic</button>
+        <button type="button" class="category-pill" data-category="nature">🌲 Nature</button>
+        <button type="button" class="category-pill" data-category="minimalist">⚫ Minimal</button>
+        <button type="button" class="category-pill" data-category="coding">💻 Coding</button>
+      </nav>
+
+      <!-- Right: Actions & Top Download Button -->
+      <div class="header-actions">
+        <button type="button" class="btn btn-glass" id="btn-top-gallery" title="Open 4K Wallpaper Gallery">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <span class="btn-text">Gallery</span>
+          <span class="counter-badge" id="wallpaper-count-badge">10</span>
+        </button>
+
+        <button type="button" class="btn btn-glass" id="btn-toggle-mode" title="Toggle Glass Window / Pure Art Mode (M)">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+          <span class="btn-text" id="mode-text">Art Mode</span>
+        </button>
+
+        <!-- Top Primary Download CTA Button -->
+        <button type="button" class="btn btn-primary btn-top-download" id="btn-download-top" title="Download Current 4K UHD Wallpaper (3840×2160)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          <span class="btn-label">Download 4K</span>
+          <span class="res-badge">3840×2160</span>
+        </button>
+
+        <button type="button" class="btn btn-icon" id="btn-top-fullscreen" title="Toggle Fullscreen (F)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+          </svg>
+        </button>
+
+        <button type="button" class="btn btn-icon" id="btn-top-clean" title="Clean Wallpaper Screensaver (Press H)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Wallpaper Stage Area -->
+  <main id="wallpaper-viewport" class="wallpaper-stage">
+    <!-- Grid & Circuit Overlays for Code/Cyber Aesthetic -->
+    <div class="circuit-grid" id="circuit-grid" aria-hidden="true"></div>
+    <div class="ambient-glow glow-cyan" id="glow-cyan" aria-hidden="true"></div>
+    <div class="ambient-glow glow-purple" id="glow-purple" aria-hidden="true"></div>
+
+    <!-- Mode 1: Central Floating IDE Glass Window -->
+    <section class="code-window" id="code-window" aria-label="Code Editor Preview">
+      <!-- Window Titlebar -->
+      <header class="window-header">
+        <div class="window-controls" aria-label="Window buttons">
+          <span class="control-dot close" title="Close"></span>
+          <span class="control-dot minimize" title="Minimize"></span>
+          <span class="control-dot expand" title="Maximize"></span>
+        </div>
+        
+        <div class="window-tabs">
+          <div class="tab active" id="active-tab">
+            <svg class="file-icon js-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" aria-hidden="true">
+              <rect width="24" height="24" rx="4" fill="#F7DF1E"/>
+              <path d="M7 16.5C7.8 17.5 9 18 10.5 18C12 18 13.2 17.2 13.2 15.5C13.2 14 12.2 13.2 10.8 12.6L10 12.3C9 11.9 8.2 11.3 8.2 10.3C8.2 9.1 9.2 8.2 10.8 8.2C12 8.2 13 8.8 13.6 9.8L12.4 10.6C12 9.9 11.4 9.6 10.8 9.6C10 9.6 9.4 10 9.4 10.6C9.4 11.2 9.8 11.6 10.6 11.9L11.4 12.3C13 13 14.4 13.8 14.4 15.7C14.4 17.8 12.8 19.4 10.5 19.4C8.6 19.4 7.2 18.4 6.4 17.2L7 16.5ZM16.2 8.4H17.4V16.8C17.4 18.2 16.4 19.4 14.8 19.4C14.1 19.4 13.4 19.1 12.9 18.7L13.5 17.6C13.9 18 14.3 18.2 14.8 18.2C15.6 18.2 16.2 17.6 16.2 16.6V8.4Z" fill="#000"/>
+            </svg>
+            <span class="tab-title">mohammad_amaan.js</span>
+            <span class="tab-badge">4K UHD</span>
+          </div>
+          <div class="tab inactive">
+            <span class="tab-title">wallpaper_core.ts</span>
+          </div>
+        </div>
+
+        <!-- Window Actions & Breadcrumbs -->
+        <div class="window-right-actions">
+          <button type="button" class="win-btn" id="btn-copy-code" title="Copy code to clipboard (C)">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span class="win-btn-text">Copy</span>
+          </button>
+
+          <button type="button" class="win-btn win-btn-accent" id="btn-window-download" title="Quick Export 4K PNG">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            <span class="win-btn-text">Export 4K</span>
+          </button>
+
+          <div class="window-breadcrumbs">
+            <span>src</span>
+            <span class="breadcrumb-sep">/</span>
+            <span>wallpapers</span>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-active">amaan.js</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Code Window Body with Line Numbers & Code -->
+      <div class="window-content">
+        <div class="line-numbers" id="line-numbers" aria-hidden="true">
+          <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+          <span>06</span><span>07</span><span>08</span><span>09</span><span>10</span>
+          <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+          <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+          <span>21</span><span>22</span><span>23</span><span>24</span>
+        </div>
+        <pre class="code-editor" id="code-content"><code class="language-javascript"></code></pre>
+      </div>
+
+      <!-- Window Status Bar -->
+      <footer class="window-statusbar">
+        <div class="status-left">
+          <span class="status-item"><span class="branch-icon">⎇</span> main*</span>
+          <span class="status-item"><span class="branch-icon">🌐</span> amaandev.me</span>
+          <span class="status-item">⚡ 0 Errors, 0 Warnings</span>
+        </div>
+        <div class="status-right">
+          <span class="status-item">UTF-8</span>
+          <span class="status-item">JavaScript (ESNext)</span>
+          <span class="status-item resolution-pill">3840 × 2160 4K UHD</span>
+        </div>
+      </footer>
+    </section>
+
+    <!-- Mode 2: Pure Artwork Minimalist Desktop Widget -->
+    <section class="art-clock-widget hidden" id="art-clock-widget" aria-label="Desktop Time Widget">
+      <div class="clock-time" id="widget-time">00:00</div>
+      <div class="clock-date" id="widget-date">Loading date...</div>
+      <div class="art-caption-box">
+        <span class="art-active-name" id="widget-art-name">Cyber City Midnight</span>
+        <span class="art-meta-pill">3840 × 2160 UHD • Mohammad Amaan</span>
+      </div>
+    </section>
+
+    <!-- Floating Watermark/Signature -->
+    <div class="wallpaper-branding">
+      <span class="brand-text">DESIGNED FOR MOHAMMAD AMAAN • AMAANDEV.ME • 4K ULTRA-HD</span>
+    </div>
+  </main>
+
+  <!-- Bottom Floating Control Dock -->
+  <aside class="control-hud" id="control-hud" aria-label="Wallpaper Studio Toolbar">
+    <div class="hud-bar">
+      <!-- Wallpaper Navigator / Selector -->
+      <div class="hud-wallpaper-nav">
+        <button type="button" class="nav-arrow" id="btn-prev-wallpaper" title="Previous Wallpaper (←)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        
+        <div class="wallpaper-pill-strip" id="wallpaper-pill-strip">
+          <!-- Populated dynamically via script.js -->
+        </div>
+
+        <button type="button" class="nav-arrow" id="btn-next-wallpaper" title="Next Wallpaper (→)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <!-- Actions & Primary Download CTA -->
+      <div class="hud-action-section">
+        <button type="button" class="btn btn-secondary" id="btn-open-editor" title="Customize Name & Code">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+          <span>Edit Code</span>
+        </button>
+
+        <button type="button" class="btn btn-secondary" id="btn-open-gallery" title="Open 4K Gallery">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <span>Gallery</span>
+        </button>
+
+        <!-- Resolution Selector -->
+        <div class="res-selector" title="Choose export resolution">
+          <select id="export-res-select" class="res-dropdown" aria-label="Export Resolution">
+            <option value="4k" selected>4K UHD (3840×2160)</option>
+            <option value="1080p">1080p FHD (1920×1080)</option>
+          </select>
+        </div>
+
+        <!-- Primary Download Button -->
+        <button type="button" class="btn btn-primary btn-download pulse-btn" id="btn-download-4k" title="Instant render & download UHD wallpaper (D)">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          <span class="btn-text">Download 4K Wallpaper</span>
+        </button>
+
+        <!-- Collapse HUD Button -->
+        <button type="button" class="btn btn-icon" id="btn-hide-hud" title="Clean View (Press 'H' to toggle)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Floating Restore Controls Pill (When HUD is minimized) -->
+  <button type="button" class="hud-restore-btn hidden" id="btn-restore-hud" title="Show Wallpaper Studio Controls (Press H)">
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </svg>
+    <span>Controls &amp; Download</span>
+    <kbd class="key-hint">H</kbd>
+  </button>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Modal: Live Code Customizer -->
+  <div class="modal-backdrop hidden" id="modal-editor" role="dialog" aria-modal="true" aria-labelledby="editor-modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h2 id="editor-modal-title">Customize Wallpaper Code</h2>
+          <p class="modal-subtitle">Personalize your name, stack, and motto for custom 4K renders.</p>
+        </div>
+        <button type="button" class="modal-close" id="btn-close-editor" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="input-developer-name">Your Full Name</label>
+          <input type="text" id="input-developer-name" class="text-input" value="Mohammad amaan" placeholder="e.g. Mohammad amaan">
+        </div>
+        <div class="form-group">
+          <label for="input-role">Developer Role / Title</label>
+          <input type="text" id="input-role" class="text-input" value="Full-Stack Architect &amp; Visionary" placeholder="e.g. Full-Stack Architect">
+        </div>
+        <div class="form-group">
+          <label for="input-portfolio">Portfolio Website Domain</label>
+          <input type="text" id="input-portfolio" class="text-input" value="amaandev.me" placeholder="e.g. amaandev.me">
+        </div>
+        <div class="form-group">
+          <label for="input-skills">Tech Stack (comma-separated)</label>
+          <input type="text" id="input-skills" class="text-input" value="JavaScript, TypeScript, Node.js, React, AI Systems">
+        </div>
+        <div class="form-group">
+          <label for="input-motto">Personal Motto / Philosophy</label>
+          <input type="text" id="input-motto" class="text-input" value="Crafting next-generation digital experiences">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="btn-reset-code">Reset to Default</button>
+        <button type="button" class="btn btn-primary" id="btn-apply-code">Update Wallpaper</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: 4K Gallery (Multi-Category) -->
+  <div class="modal-backdrop hidden" id="modal-gallery" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
+    <div class="modal-card modal-large">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h2 id="gallery-modal-title">Mohammad Amaan — 4K Wallpaper Collection</h2>
+          <p class="modal-subtitle">All wallpapers are rendered in full <strong>3840 × 2160 Ultra-HD resolution</strong>. Instant 1-click preview and download.</p>
+        </div>
+        <button type="button" class="modal-close" id="btn-close-gallery" aria-label="Close modal">&times;</button>
+      </div>
+
+      <!-- Gallery Filter Chips -->
+      <div class="gallery-filter-bar">
+        <button type="button" class="gallery-tab active" data-filter="all">All Wallpapers (10+)</button>
+        <button type="button" class="gallery-tab" data-filter="anime">🌸 Anime (2)</button>
+        <button type="button" class="gallery-tab" data-filter="futuristic">🚀 Futuristic (3)</button>
+        <button type="button" class="gallery-tab" data-filter="nature">🌲 Nature (1)</button>
+        <button type="button" class="gallery-tab" data-filter="minimalist">⚫ Minimalist (2)</button>
+        <button type="button" class="gallery-tab" data-filter="coding">💻 Coding (4)</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="gallery-grid" id="gallery-cards-grid">
+          <!-- Populated dynamically via script.js for full interactivity -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="btn-close-gallery-footer">Close Gallery</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offscreen Canvas for Native 4K UHD (3840x2160) Generation -->
+  <canvas id="export-canvas" width="3840" height="2160" style="display: none;" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
